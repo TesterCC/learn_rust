@@ -39,19 +39,33 @@
 
 # Rust Wiki
 
-crate 是 Rust中最小的编译单元，package 是 单个或多个crate的集合。
+- crate 是 Rust中最小的编译单元，package 是 单个或多个crate的集合。
+- Cargo使用TOML作为标准配置格式，例如：Cargo.toml。
 
 # Rust Command
 
-```shell
-cargo build
-cargo check
+## Normal
 
-cargo run
+```bash
+rustup update   // udpate rust version
+rustup self uninstall   // delete rustup and rust toolchains
+rustc --version     // get rust version
+```
+
+## Cargo
+```bash
+
+cargo check    // 构建项目 跳过生成可执行文件的步骤
+cargo build    // 构建项目 并生成文件
+cargo run      // 构建并运行项目
+
+// 构建产生的结果会被cargo存储再target/debug目录下
 
 // 生成的可执行文件在 target/release目录下
 cargo build --release  
 
 cargo run --release
-```
 
+// 在本地构建一份有关项目所有依赖的文档 并自动地在浏览器中将文档打开来供用户查阅
+cargo doc --open 
+```
