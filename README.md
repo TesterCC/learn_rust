@@ -33,9 +33,11 @@
 
 3. 提高
 
-《The Rustonomicon》又翻译为《Rust死灵书》，但是一直没写有写完。但要能建立起对Rust的深入理解，这本书必不可少。 [B站 令狐一冲的视频](https://www.bilibili.com/video/BV1xp4y1a78D)
+- 《The Rustonomicon》又翻译为《Rust死灵书》，但是一直没写有写完。但要能建立起对Rust的深入理解，这本书必不可少。
 
-[Writing an OS in Rust](https://os.phil-opp.com/) 这一系列博客是你最好的学习材料。
+- [B站 令狐一冲的视频](https://www.bilibili.com/video/BV1xp4y1a78D)
+
+- [Writing an OS in Rust](https://os.phil-opp.com/) 这一系列博客是你最好的学习材料。
 
 # Rust Wiki
 
@@ -49,7 +51,10 @@
 ```bash
 rustup update   // udpate rust version
 rustup self uninstall   // delete rustup and rust toolchains
+rustup doc     // 打开帮助文档 推荐 Rust by Example
+
 rustc --version     // get rust version
+
 ```
 
 ## Cargo
@@ -69,3 +74,4 @@ cargo run --release
 // 在本地构建一份有关项目所有依赖的文档 并自动地在浏览器中将文档打开来供用户查阅
 cargo doc --open 
 ```
+
