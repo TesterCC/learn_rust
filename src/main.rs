@@ -5,10 +5,8 @@
 // Rust权威指南 第2章：猜数游戏，生成一个1到100之间的随机整数，并让玩家对数字进行猜测，用户猜对则打印信息
 // ref: https://e.dangdang.com/pc/reader/index.html?id=1901221748
 // rust会将预导入 prelude 模块内的条目自动引入每一段程序的作用域中。如果你需要的类型不在预导入模块内，就必须使用use语句来显示地进行声明。
-use std::io;
-// 把标准库std的io模块引入当前的作用域中
-use std::cmp::Ordering;
-// 枚举类型，拥有Less、Greater、Equal这3个变体
+use std::io;   // 把标准库std的io模块引入当前的作用域中
+use std::cmp::Ordering;  // 枚举类型，拥有Less、Greater、Equal这3个变体
 use rand::Rng;  // Rng是一个trait（特征），定义了随机数生成器需要实现的方法集合。为了使用这些方法，需要显示引入到当前作用域。
 
 fn main() {
@@ -31,7 +29,9 @@ fn main() {
 
     println!("You guessed: {}", guess);
 
-    // todo: compare secret number and guess number
+    // todo: compare secret number and guess number  P62 2-4 最后
+    // cmp方法为可比较的值类型计算出它们比较后的结果。
+    // 这里cmp方法接收了被比较值 secret_number 的引用作为参数来与 guess进行比较
     match guess.cmp(&secret_number) {
         Ordering::Less => println!("Too small!"),
         Ordering::Greater => println!("Too big!"),
